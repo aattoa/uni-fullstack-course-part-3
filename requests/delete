@@ -1,3 +1,6 @@
 #!/bin/sh
 
-curl --show-headers --request DELETE http://localhost:3001/api/persons/3
+URL=https://uni-fullstack-course-part-3.onrender.com
+# URL=http://localhost:3001
+
+curl --show-headers --request DELETE "${URL}/3/api/persons"

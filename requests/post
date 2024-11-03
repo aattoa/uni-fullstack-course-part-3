@@ -1,3 +1,6 @@
 #!/bin/sh
 
-curl --show-headers --json '{"name":"hello world","number":"22222222222"}' http://localhost:3001/api/persons
+URL=https://uni-fullstack-course-part-3.onrender.com
+# URL=http://localhost:3001
+
+curl --show-headers --json '{"name":"hello world","number":"22222222222"}' "${URL}/api/persons"
