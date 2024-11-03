@@ -9,7 +9,7 @@ mongoose.set('strictQuery', false)
 const add_record = (url, name, number) => {
   mongoose.connect(url)
   const person = new Person({ name, number })
-  person.save().then(result => {
+  person.save().then(result => { // eslint-disable-line no-unused-vars
     mongoose.connection.close()
   })
 }
@@ -25,10 +25,10 @@ const show_records = (url) => {
   })
 }
 
-if (process.argv.length == 3) {
+if (process.argv.length === 3) {
   show_records(make_url(process.argv[2]))
 }
-else if (process.argv.length == 5) {
+else if (process.argv.length === 5) {
   add_record(make_url(process.argv[2]), process.argv[3], process.argv[4])
 }
 else {
